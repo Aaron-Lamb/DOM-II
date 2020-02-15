@@ -1,4 +1,10 @@
 // Your code goes here
 let halt = document.querySelectorAll('.nav-link');
-console.log(halt);
-halt.style.color('red');
+halt.forEach(navLink => {
+    navLink.addEventListener('click', (preDef) => {
+        preDef.preventDefault();
+    })
+});
+
+let buttons = document.querySelectorAll('.btn');
+
