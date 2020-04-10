@@ -8,6 +8,14 @@ body.addEventListener('click', (event) => {
     event.target.style.backgroundColor = "white";
     event.target.style.color = "black";
 })
+body.addEventListener('keydown', (event) => {
+    event.target.style.backgroundColor = "darkblue";
+    event.target.style.color = "orange";
+})
+body.addEventListener('keyup', (event) => {
+    event.target.style.backgroundColor = "white";
+    event.target.style.color = "black";
+})
 
 let busImg = document.querySelectorAll("img")[0];
 busImg.addEventListener('dblclick', (event) => {
@@ -35,4 +43,19 @@ anchors.forEach((anchor) => {
     anchor.addEventListener('click', (event) => {
         event.preventDefault();
     })
+})
+
+let paragraphs = document.querySelectorAll('p');
+paragraphs.forEach((para) => {
+    para.addEventListener('copy', (event) => {
+        event.target.style.color = "green";
+        event.target.style.backgroundColor = 'gray';
+    })
+})
+body.addEventListener('mousedown', (event) => {
+    event.target.style.backgroundColor = "silver";
+})
+
+busImg.addEventListener('drag', (event) => {
+    event.target.style.border = '5px solid seagreen';
 })
