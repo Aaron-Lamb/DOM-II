@@ -47,6 +47,7 @@ anchors.forEach((anchor) => {
 
 let paragraphs = document.querySelectorAll('p');
 paragraphs.forEach((para) => {
+    para.classList.add('paragraph');
     para.addEventListener('copy', (event) => {
         event.target.style.color = "green";
         event.target.style.backgroundColor = 'gray';
@@ -59,3 +60,14 @@ body.addEventListener('mousedown', (event) => {
 busImg.addEventListener('drag', (event) => {
     event.target.style.border = '5px solid seagreen';
 })
+
+let images = document.querySelectorAll("img");
+images.forEach((image) => {
+    image.addEventListener('dragend', () => {
+        image.style.height = '40vh';
+        image.style.width = '75%';
+    })
+})
+
+//Green sock animations
+gsap.to(".paragraph", {duration: 2, x: 50, backgroundColor: "aliceblue", borderRadius: "15%", border: "5px solid black"});
