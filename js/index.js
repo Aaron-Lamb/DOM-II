@@ -47,7 +47,6 @@ anchors.forEach((anchor) => {
 
 let paragraphs = document.querySelectorAll('p');
 paragraphs.forEach((para) => {
-    para.classList.add('paragraph');
     para.addEventListener('copy', (event) => {
         event.target.style.color = "green";
         event.target.style.backgroundColor = 'gray';
@@ -68,6 +67,3 @@ images.forEach((image) => {
         image.style.width = '75%';
     })
 })
-
-//Green sock animations
-gsap.to(".paragraph", {duration: 2, x: 50, backgroundColor: "aliceblue", borderRadius: "15%", border: "5px solid black"});
